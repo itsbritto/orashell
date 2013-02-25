@@ -8,4 +8,3 @@ Oracle DB related shell scripts.
 * sesw.sh - queries v$session every second
 * sesw9i.sh - queries v$sessoin/v$session_wait every 5 seconds (9i version)
 * seswsmall.sh - queries v$session every second, optimized for 80-char window
-* vmstat2csv.sh - create CSV file from the vmstat log
