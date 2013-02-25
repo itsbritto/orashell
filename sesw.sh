@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-#  queries v$session every 1 second.  fits in the 80-char window.  
+#  queries v$session every second
 # 
 #  Usage:
 #    sh sesw.sh [> output_file]

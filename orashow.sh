@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  Updated: 12/20/2012
+#  multi-purpose real-time monitoring script, for performance testing phase
 #
 ################################################################################
 #ENV
