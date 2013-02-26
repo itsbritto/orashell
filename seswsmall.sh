@@ -47,3 +47,4 @@ EOF
 }
 
 sesw | sqlplus -s /nolog
+
