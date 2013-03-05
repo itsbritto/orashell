@@ -49,7 +49,9 @@ touch $TMP1
   while [ -f $TMP1 ]
   do
     cat << EOF
-  SELECT REPLACE(n.name,' ','_') name, s.value
+  SELECT TO_CHAR(sysdate,'YYYYMMDDHH24MISS') datetime
+       , REPLACE(n.name,' ','_') name
+       , s.value
     FROM v\$statname n, v\$sysstat s
    WHERE n.statistic# = s.statistic#
      AND n.name in ('CPU used by this session'
@@ -60,11 +62,11 @@ touch $TMP1
 EOF
     sleep $INTV
   done
-} | sqlplus -s $LOGIN | while read name value
+} | sqlplus -s $LOGIN | while read datetime name value
 do
   currvals["$name"]=$(($value-${lastvals["$name"]:-0}))
   lastvals["$name"]=$value
-  echo `date +'%Y-%m-%d %H:%M:%S'`,$name,${currvals["$name"]} | tee -a $OUTFILE
+  echo $datetime,$name,${currvals["$name"]} | tee -a $OUTFILE
 done
 
 ################################################################################
