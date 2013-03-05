@@ -9,13 +9,13 @@ TMP1=.orastats_`date +%s`_1.log
 export NLS_LANG=American_America.AL32UTF8
 trap "echo terminated; rm -f $TMP1; exit 0" INT
 
-LOGIN=${1:-"/ as sysdba"}
+LOGIN=${1:-"none"}
 INTV=${2:-"5"}
 OUTFILE=${3:-"/dev/null"}
 
 ################################################################################
 # HELP
-if [ "$LOGIN" = "/ as sysdba" ]
+if [ "$LOGIN" = "none" ]
 then
   cat << EOF
   Usage: $PG login_str interval [output_file]
