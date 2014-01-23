@@ -338,7 +338,7 @@ then
     set pages 9999
     set feedback off
     col "I#" for 99
-    col sid for 999
+    col sid for 9999
     col "S#" for 99999
     col spid for a6
     col machine for a20 trunc
