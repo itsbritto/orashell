@@ -1,6 +1,6 @@
 orashell
 ========
-Oracle DB related shell scripts.
+various scripts to monitor/administer/analyze Oracle Database.
 
 Language|Name          |Description
 --------|--------------|-------------------------------------------------------------------------
