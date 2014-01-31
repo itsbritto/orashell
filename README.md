@@ -1,6 +1,6 @@
 orashell
 ========
-various scripts to monitor/administer/analyze Oracle Database.
+various scripts to monitor/analyze Oracle Database performance
 
 Language|Name          |Description
 --------|--------------|-------------------------------------------------------------------------
