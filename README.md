@@ -14,4 +14,3 @@ sh      |trace.sh      |sets sql_trace on/off
 sh      |vmstatcsv.sh  |vmstat with timestamp, and output with csv
 bash4-  |oraevents.sh  |queries v$system_events and displays the wait time (as differences)
 bash4-  |orastats.sh   |queries v$sysstat and displays the major stat values (as differences)
-python  |sqlcsv.py     |run sql against the csv files
