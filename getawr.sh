@@ -63,7 +63,7 @@ EOF
             whenever sqlerror exit rollback;
             whenever oserror exit rollback;
             set head off newpage none feedback off echo off trimspool on trimout on
-            set lines 1000 pages 50000 arraysize 1000 long 1000000 longchunksize 1000
+            set lines 9999 pages 50000 arraysize 1000 long 1000000 longchunksize 1000
             spool awr_${inst}_${lastid}_${snapid}.$FORMAT
             select output from table(dbms_workload_repository.awr_report_$FORMAT($dbid, $inst, $lastid, $snapid));
             spool off
@@ -85,7 +85,7 @@ else
           whenever sqlerror exit rollback;
           whenever oserror exit rollback;
           set head off newpage none feedback off echo off trimspool on trimout on
-          set lines 1000 pages 50000 arraysize 1000 long 1000000 longchunksize 1000
+          set lines 9999 pages 50000 arraysize 1000 long 1000000 longchunksize 1000
           spool awr_g_${lastid}_${snapid}.$FORMAT
           select output from table(dbms_workload_repository.awr_global_report_$FORMAT($dbid, '', $lastid, $snapid));
           spool off
